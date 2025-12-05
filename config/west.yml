@@ -4,11 +4,21 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: ssbb
+      url-base: https://github.com/ssbb
+    - name: urob
+      url-base: https://github.com/urob
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
+    - name: zmk-antecedent-morph
+      remote: ssbb
+      revision: v1
+    - name: zmk-auto-layer
+      remote: urob
+      revision: main
   self:
     path: config
