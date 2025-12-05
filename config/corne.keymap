@@ -390,10 +390,10 @@
         utils_layer {
             display-name = "UTIL";
             bindings = <
-&to 0   &bt BT_SEL 0              &bt BT_SEL 1    &bt BT_SEL 2  &trans   &bl BL_TOG  &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(LS(LC(NUMBER_4)))  &kp LG(LS(N5))  &trans        &trans   &trans      &kp LS(LA(LC(LG(F9))))  &td_f1  &td_f2  &td_f3  &td_f4  &trans
-&trans  &kp F9                    &kp F10         &kp F11       &kp F12  &trans      &trans                  &trans  &trans  &trans  &trans  &trans
-                                                  &trans        &trans   &trans      &trans                  &trans  &trans
+&to 0   &bt BT_SEL 0              &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_CLR   &bl BL_TOG  &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(LS(LC(NUMBER_4)))  &kp LG(LS(N5))  &trans        &trans       &trans      &kp LS(LA(LC(LG(F9))))  &td_f1  &td_f2  &td_f3  &td_f4  &trans
+&trans  &kp F9                    &kp F10         &kp F11       &kp F12      &trans      &trans                  &trans  &trans  &trans  &trans  &trans
+                                                  &trans        &trans       &trans      &trans                  &trans  &trans
             >;
         };
 
