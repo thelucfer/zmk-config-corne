@@ -39,16 +39,6 @@
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41>;
         };
 
-        ad_afn: adaptive_arrow_fn {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "ADAPTIVE_ARROW_FN";
-            #binding-cells = <0>;
-            defaults = <&kp EQUAL>;
-            bindings = <&arrow_fn>;
-            antecedents = <SPACE>;
-            max-delay-ms = <250>;
-        };
-
         ltq: ltq {
             compatible = "zmk,behavior-hold-tap";
             label = "LTQ";
@@ -132,9 +122,9 @@
             bindings = <&kp F8>, <&kp LA(F8)>, <&kp LG(F8)>;
         };
 
-        magic_shift: magic_shift {
+        td_magic_shift: td_magic_shift {
             compatible = "zmk,behavior-tap-dance";
-            label = "MAGIC_SHIFT";
+            label = "TD_MAGIC_SHIFT";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&sk LEFT_SHIFT>, <&caps_word>;
@@ -204,17 +194,6 @@
             tapping-term-ms = <200>;
         };
 
-        b_magic_shift: b_magic_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "B_MAGIC_SHIFT";
-            bindings = <&kp>, <&magic_shift>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-        };
-
         qexcl: qexcl {
             compatible = "zmk,behavior-mod-morph";
             label = "QEXCL";
@@ -257,6 +236,13 @@
 
             tapping-term-ms = <200>;
         };
+
+        td_equals_afn: td_equals_afn {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_EQUALS_AFN";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>, <&arrow_fn>;
+        };
     };
 
     combos {
@@ -293,7 +279,7 @@
         };
 
         equal {
-            bindings = <&ad_afn>;
+            bindings = <&none>;
             key-positions = <16 28>;
         };
 
@@ -361,6 +347,16 @@
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <33 32>;
         };
+
+        rbrace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <8 9>;
+        };
+
+        lbrace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <7 8>;
+        };
     };
 
     macros {
@@ -378,10 +374,10 @@
         default_layer {
             display-name = "BASE";
             bindings = <
-&kp ESCAPE         &kp Q              &kp W         &kp F            &kp P            &kp G                &kp J         &kp L            &kp U                        &kp Y         &kp SEMI           &kp GRAVE
-&kp BACKSPACE      &hml LEFT_SHIFT A  &hml LCTRL R  &hml LEFT_ALT S  &hml LEFT_GUI T  &kp D                &kp H         &hmr LEFT_GUI N  &hmr LEFT_ALT E              &hmr LCTRL I  &hmr LEFT_SHIFT O  &kp SINGLE_QUOTE
-&td_magic_layer_3  &kp Z              &kp X         &kp C            &kp V            &kp B                &kp K         &kp M            &kp COMMA                    &kp DOT       &qexcl             &td_magic_layer_4
-                                                    &kp TAB          &kp SPACE        &td_magic_layer_1    &td_num_word  &kp ENTER        &b_magic_shift LEFT_SHIFT 0
+&kp ESCAPE         &kp Q              &kp W         &kp F            &kp P            &kp G                &kp J         &kp L            &kp U            &kp Y         &kp SEMI           &kp GRAVE
+&kp BACKSPACE      &hml LEFT_SHIFT A  &hml LCTRL R  &hml LEFT_ALT S  &hml LEFT_GUI T  &kp D                &kp H         &hmr LEFT_GUI N  &hmr LEFT_ALT E  &hmr LCTRL I  &hmr LEFT_SHIFT O  &kp SINGLE_QUOTE
+&td_magic_layer_3  &kp Z              &kp X         &kp C            &kp V            &kp B                &kp K         &kp M            &kp COMMA        &kp DOT       &qexcl             &td_magic_layer_4
+                                                    &kp TAB          &kp SPACE        &td_magic_layer_1    &td_num_word  &kp ENTER        &td_magic_shift
             >;
         };
 
