@@ -279,7 +279,7 @@
         };
 
         equal {
-            bindings = <&none>;
+            bindings = <&td_equals_afn>;
             key-positions = <16 28>;
         };
 
