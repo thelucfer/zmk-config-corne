@@ -180,7 +180,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_MAGIC_LAYER_3";
             #binding-cells = <0>;
-            bindings = <&magic_layer 0 0>, <&tog 0>;
+            bindings = <&magic_layer 3 3>, <&tog 3>;
 
             tapping-term-ms = <200>;
         };
