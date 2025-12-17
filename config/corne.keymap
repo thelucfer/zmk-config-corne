@@ -377,7 +377,7 @@
 &kp ESCAPE         &kp Q              &kp W         &kp F            &kp P            &kp G                &kp J         &kp L            &kp U            &kp Y         &kp SEMI           &kp GRAVE
 &kp BACKSPACE      &hml LEFT_SHIFT A  &hml LCTRL R  &hml LEFT_ALT S  &hml LEFT_GUI T  &kp D                &kp H         &hmr LEFT_GUI N  &hmr LEFT_ALT E  &hmr LCTRL I  &hmr LEFT_SHIFT O  &kp SINGLE_QUOTE
 &td_magic_layer_3  &kp Z              &kp X         &kp C            &kp V            &kp B                &kp K         &kp M            &kp COMMA        &kp DOT       &qexcl             &td_magic_layer_4
-                                                    &kp TAB          &kp SPACE        &td_magic_layer_1    &td_num_word  &kp ENTER        &td_magic_shift
+                                                    &kp TAB          &kp SPACE        &td_magic_layer_1    &td_num_word  &td_magic_shift  &kp ENTER
             >;
         };
 
