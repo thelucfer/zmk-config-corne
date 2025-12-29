@@ -10,6 +10,8 @@ manifest:
       url-base: https://github.com/urob
     - name: gpeye
       url-base: https://github.com/GPeye
+    - name: Ziembski
+      url-base: https://github.com/Ziembski
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -24,6 +26,9 @@ manifest:
       revision: main
     - name: hammerbeam-slideshow
       remote: gpeye
+      revision: main
+    - name: nice-view-press-start
+      remote: Ziembski
       revision: main
   self:
     path: config
