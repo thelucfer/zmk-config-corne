@@ -243,6 +243,19 @@
             #binding-cells = <0>;
             bindings = <&kp EQUAL>, <&arrow_fn>;
         };
+
+        layer_hold_tap: layer_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_HOLD_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            bindings = <&sl>, <&mo>;
+
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+        };
     };
 
     combos {
@@ -374,30 +387,30 @@
         default_layer {
             display-name = "BASE";
             bindings = <
-&kp ESCAPE         &kp Q              &kp W         &kp F            &kp P            &kp G                &kp J         &kp L            &kp U            &kp Y         &kp SEMI           &kp GRAVE
-&kp BACKSPACE      &hml LEFT_SHIFT A  &hml LCTRL R  &hml LEFT_ALT S  &hml LEFT_GUI T  &kp D                &kp H         &hmr LEFT_GUI N  &hmr LEFT_ALT E  &hmr LCTRL I  &hmr LEFT_SHIFT O  &kp SINGLE_QUOTE
-&td_magic_layer_3  &kp Z              &kp X         &kp C            &kp V            &kp B                &kp K         &kp M            &kp COMMA        &kp DOT       &qexcl             &td_magic_layer_4
-                                                    &kp TAB          &kp SPACE        &td_magic_layer_1    &td_num_word  &td_magic_shift  &kp ENTER
+&kp ESCAPE         &kp Q              &kp W         &kp F            &kp P            &kp G                  &kp J                &kp L            &kp U            &kp Y         &kp SEMI           &kp GRAVE
+&kp BACKSPACE      &hml LEFT_SHIFT A  &hml LCTRL R  &hml LEFT_ALT S  &hml LEFT_GUI T  &kp D                  &kp H                &hmr LEFT_GUI N  &hmr LEFT_ALT E  &hmr LCTRL I  &hmr LEFT_SHIFT O  &kp SINGLE_QUOTE
+&td_magic_layer_3  &kp Z              &kp X         &kp C            &kp V            &kp B                  &kp K                &kp M            &kp COMMA        &kp DOT       &qexcl             &td_magic_layer_4
+                                                    &kp TAB          &kp SPACE        &layer_hold_tap 1 1    &layer_hold_tap 2 2  &td_magic_shift  &kp ENTER
             >;
         };
 
         nav {
             display-name = "NAV";
             bindings = <
-&to 0   &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans  &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans    &trans  &trans     &trans
-                        &trans  &trans  &to 0     &trans  &trans    &trans
+                        &trans  &trans  &trans    &trans  &trans    &trans
             >;
         };
 
         num {
             display-name = "NUM";
             bindings = <
-&to 0   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &to 0   &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
