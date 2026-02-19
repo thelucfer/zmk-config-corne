@@ -219,7 +219,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             flavor = "balanced";
-            bindings = <&sl>, <&mo>;
+            bindings = <&mo>, <&sl>;
 
             require-prior-idle-ms = <150>;
             hold-trigger-on-release;
