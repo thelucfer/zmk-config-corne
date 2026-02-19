@@ -142,14 +142,6 @@
             hold-trigger-on-release;
         };
 
-        td_magic_layer_1: td_magic_layer_1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_MAGIC_LAYER_1";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&nav_word 1>, <&tog 1>;
-        };
-
         td_magic_layer_2: td_magic_layer_2 {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_MAGIC_LAYER_2";
@@ -157,14 +149,6 @@
             bindings = <&magic_layer 3 3>, <&tog 3>;
 
             tapping-term-ms = <200>;
-        };
-
-        slash_backslash: slash_backslash {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SLASH_BACKSLASH";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp SLASH>, <&kp BACKSLASH>;
         };
 
         td_magic_layer_3: td_magic_layer_3 {
