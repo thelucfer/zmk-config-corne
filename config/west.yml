@@ -4,10 +4,10 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: ssbb
-      url-base: https://github.com/ssbb
-    - name: urob
-      url-base: https://github.com/urob
+    # - name: ssbb
+    #   url-base: https://github.com/ssbb
+    # - name: urob
+    #   url-base: https://github.com/urob
     - name: gpeye
       url-base: https://github.com/GPeye
     - name: Ziembski
@@ -18,12 +18,12 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
-    - name: zmk-antecedent-morph
-      remote: ssbb
-      revision: v1
-    - name: zmk-auto-layer
-      remote: urob
-      revision: main
+    # - name: zmk-antecedent-morph
+    #   remote: ssbb
+    #   revision: v1
+    # - name: zmk-auto-layer
+    #   remote: urob
+    #   revision: main
     - name: hammerbeam-slideshow
       remote: gpeye
       revision: main

@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <behaviors/num_word.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
@@ -130,14 +129,6 @@
             bindings = <&sk LEFT_SHIFT>, <&caps_word>;
         };
 
-        td_num_word: td_num_word {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_NUM_WORD";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&num_word 2>, <&tog 2>;
-        };
-
         magic_layer: magic_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "MAGIC_LAYER";
@@ -219,13 +210,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
-        };
-
-        nav_word: nav_word {
-            compatible = "zmk,behavior-auto-layer";
-            #binding-cells = <1>;
-            continue-list = <LEFT DOWN UP RIGHT PG_DN PG_UP>;
-            ignore-modifiers;
         };
 
         td_alt_layers: td_alt_layers {
